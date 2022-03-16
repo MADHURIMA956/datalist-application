@@ -10,23 +10,28 @@ import { MDBTable,
   MDBPaginationItem,
   MDBPaginationLink
 } from 'mdb-react-ui-kit';
-import './App.css';
 
 function App() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState('');
   const [sortvalue, setSortvalue] = useState('');
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pageLimit, setPageLimit] = useState(4);
+
 
   const sortOption = ['name', 'address' , 'email', 'phone' , 'satus'];
 
   useEffect(()=> {
-    loadUserData();
+    loadUserData(0,4,0);
   },[])  
 
-  const loadUserData = async () => {
+  const loadUserData = async (start,end,increse) => {
       return await axios
-      .get(`http://localhost:5000/users?_start=0&end=4`)
-      .then((res) => setData(res.data))
+      .get(`http://localhost:5000/users?_start=${start}&end=${end}`)
+      .then((res) => {
+        setData(res.data)
+        setCurrentPage(currentPage + increse)
+      })
       .catch((e)=> console.log(e))   
   }
 
@@ -41,7 +46,7 @@ function App() {
     .catch((e)=> console.log(e))   
   }
   const handleReset = () => {
-    loadUserData()
+    loadUserData(0,4,0)
   }
   
   const handleSort = async (e) => {
@@ -61,6 +66,30 @@ function App() {
       setData(res.data);
     })
     .catch((e)=> console.log(e))   
+  }
+
+  const renderPagination = () => {
+    if(currentPage === 0){
+      return (
+        <MDBPagination>
+            <MDBPaginationLink>1</MDBPaginationLink>
+            <MDBBtn onClick={() => loadUserData(4,8,1)}>Next</MDBBtn>
+        </MDBPagination>
+      )
+    }else if(currentPage < pageLimit - 1 && data.length === pageLimit){
+      return (
+        <MDBPagination>
+        <MDBBtn onClick={() => loadUserData((currentPage-1)*4,currentPage*4, -1)}>Prev</MDBBtn>
+        <MDBPaginationLink>{currentPage + 1}</MDBPaginationLink>
+        <MDBBtn onClick={() => loadUserData((currentPage+1)*4,(currentPage+2)*4, 1)}>Next</MDBBtn>
+        </MDBPagination>
+      )
+    }else{
+      <MDBPagination>
+      <MDBBtn onClick={() => loadUserData(4,8,-1)}>Prev</MDBBtn>
+      <MDBPaginationLink>{currentPage+1}</MDBPaginationLink>
+      </MDBPagination>
+    }
   }
   
   // console.log(data)
@@ -124,6 +153,12 @@ function App() {
             </MDBTable>
          </MDBCol>
        </MDBRow>
+       <div style={{
+          margine: 'auto',
+          padding:'15px',
+          maxWidth:'400px',
+           alineCenter:'center'
+        }}>{renderPagination()}</div>
      </div>
      <MDBRow>
        <MDBCol size='8'><h2>Sort by :</h2>
