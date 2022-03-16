@@ -1,0 +1,162 @@
+{"users":[
+    {
+        "name": "john",
+        "email" : "jhon@m.com",
+        "phone" : "78945872336",
+        "address" : "USA",
+        "id" : 3,
+        "status":"Active"
+    },
+    {
+        "name": "girish",
+        "email" : "girish@m.com",
+        "phone" : "9485612358",
+        "address" : "India",
+        "id" : 4,
+        "status":"Inactive"
+    },
+    {
+        "name": "rohim",
+        "email" : "rohim@m.com",
+        "phone" : "45879561258",
+        "address" : "uk",
+        "id" : 5,
+        "status":"Active"
+    },
+    {
+        "name": "sonju",
+        "email" : "sonju@m.com",
+        "phone" : "8859564587",
+        "address" : "uk",
+        "id" : 6,
+        "status":"Inactive"
+    },
+    {
+        "name": "rohit",
+        "email" : "rohit@m.com",
+        "phone" : "5287257222",
+        "address" : "uk",
+        "id" : 7,
+        "status":"Active"
+    },
+    {
+        "name": "raja",
+        "email" : "raja@m.com",
+        "phone" : "9485612358",
+        "address" : "uk",
+        "id" : 8,
+        "status":"Active"
+    },
+    {
+        "name": "joy",
+        "email" : "joy@m.com",
+        "phone" : "9584759861",
+        "address" : "india",
+        "id" : 9,
+        "status":"Inactive"
+    },
+    {
+        "name": "jit",
+        "email" : "jit@m.com",
+        "phone" : "7895864712",
+        "address" : "USA",
+        "id" : 10,
+        "status":"Active"
+    },
+    {
+        "name": "romesh",
+        "email" : "romesh@m.com",
+        "phone" : "7898475896",
+        "address" : "uk",
+        "id" : 11,
+        "status":"Active"
+    },
+    {
+        "name": "chandu",
+        "email" : "chandu@m.com",
+        "phone" : "7894857985",
+        "address" : "India",
+        "id" : 12,
+        "status":"Inactive"
+    },
+    {
+        "name": "sekhar raj",
+        "email" : "sekhar@m.com",
+        "phone" : "7894568598",
+        "address" : "uk",
+        "id" : 13,
+        "status":"Active"
+    },
+    {
+        "name": "sejati",
+        "email" : "sejati@m.com",
+        "phone" : "4584789564",
+        "address" : "India",
+        "id" : 14,
+        "status":"Inactive"
+    },
+    {
+        "name": "rani",
+        "email" : "rani@m.com",
+        "phone" : "8597498564",
+        "address" : "London",
+        "id" : 15,
+        "status":"Active"
+    },
+    {
+        "name": "chandra",
+        "email" : "chandra@m.com",
+        "phone" : "8524169571",
+        "address" : "uk",
+        "id" : 16,
+        "status":"Active"
+    },
+    {
+        "name": "rahul",
+        "email" : "rahul@m.com",
+        "phone" : "7894586958",
+        "address" : "Callifornia",
+        "id" : 17,
+        "status":"Active"
+    },
+    {
+        "name": "ritam",
+        "email" : "ritam@m.com",
+        "phone" : "7894561236",
+        "address" : "America",
+        "id" : 18,
+        "status":"Inactive"
+    },
+    {
+        "name": "jayanta",
+        "email" : "jayanta@m.com",
+        "phone" : "8564215896",
+        "address" : "USA",
+        "id" : 19,
+        "status":"Active"
+    },
+    {
+        "name": "nijuta",
+        "email" : "nijuta@m.com",
+        "phone" : "7548965231",
+        "address" : "Londan",
+        "id" : 20,
+        "status":"Inactive"
+    },
+    {
+        "name": "ramala",
+        "email" : "ramala@m.com",
+        "phone" : "8564231589",
+        "address" : "India",
+        "id" : 21,
+        "status":"Active"
+    },
+    {
+        "name": "gargi",
+        "email" : "gargi@m.com",
+        "phone" : "9564231875",
+        "address" : "usa",
+        "id" : 22,
+        "status":"Inactive"
+    }
+]}
